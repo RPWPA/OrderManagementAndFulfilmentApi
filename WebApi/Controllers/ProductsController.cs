@@ -22,7 +22,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(int id)
         {
             var product = await _repository.GetByIdAsync(id);
             if (product == null) return NotFound();
@@ -37,10 +37,25 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(int id)
         {
             await _repository.DeleteAsync(id);
             return NoContent();
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, Product product)
+        {
+            if (id != product.Id)
+                return BadRequest("Mismatched Product ID");
+
+            var existing = await _repository.GetByIdAsync(id);
+            if (existing == null)
+                return NotFound();
+
+            await _repository.UpdateAsync(product);
+            return NoContent();
+        }
+
     }
 }

@@ -3,31 +3,37 @@
   "WorkspaceRootPath": "D:\\Work\\Order Management \u0026 Fulfillment API\\Order Management And Fulfillment API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Migrations\\20250814211405_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7302371E-0B3E-4705-9E9E-9499D019D6A0}|..\\WebApi\\WebApi.csproj|d:\\work\\order management \u0026 fulfillment api\\webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3E69013-BFC1-4E93-84C8-65E0A3E67845}|..\\Infrastructure\\Infrastructure.csproj|d:\\work\\order management \u0026 fulfillment api\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Migrations\\20250816185209_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3E69013-BFC1-4E93-84C8-65E0A3E67845}|..\\Infrastructure\\Infrastructure.csproj|d:\\work\\order management \u0026 fulfillment api\\infrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F3E69013-BFC1-4E93-84C8-65E0A3E67845}|..\\Infrastructure\\Infrastructure.csproj|d:\\work\\order management \u0026 fulfillment api\\infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F3E69013-BFC1-4E93-84C8-65E0A3E67845}|..\\Infrastructure\\Infrastructure.csproj|d:\\work\\order management \u0026 fulfillment api\\infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B990D23C-B4C1-42B4-A7F8-2B65518A3FDA}|..\\Domain\\Domain.csproj|d:\\work\\order management \u0026 fulfillment api\\domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7302371E-0B3E-4705-9E9E-9499D019D6A0}|..\\WebApi\\WebApi.csproj|d:\\work\\order management \u0026 fulfillment api\\webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7302371E-0B3E-4705-9E9E-9499D019D6A0}|..\\WebApi\\WebApi.csproj|d:\\work\\order management \u0026 fulfillment api\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{961B4224-9184-42F0-B236-B62733DB90F9}|..\\Application\\Application.csproj|d:\\work\\order management \u0026 fulfillment api\\application\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{961B4224-9184-42F0-B236-B62733DB90F9}|..\\Application\\Application.csproj|d:\\work\\order management \u0026 fulfillment api\\application\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3E69013-BFC1-4E93-84C8-65E0A3E67845}|..\\Infrastructure\\Infrastructure.csproj|d:\\work\\order management \u0026 fulfillment api\\infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{961B4224-9184-42F0-B236-B62733DB90F9}|..\\Application\\Application.csproj|d:\\work\\order management \u0026 fulfillment api\\application\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B990D23C-B4C1-42B4-A7F8-2B65518A3FDA}|..\\Domain\\Domain.csproj|d:\\work\\order management \u0026 fulfillment api\\domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B990D23C-B4C1-42B4-A7F8-2B65518A3FDA}|..\\Domain\\Domain.csproj|d:\\work\\order management \u0026 fulfillment api\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B990D23C-B4C1-42B4-A7F8-2B65518A3FDA}|..\\Domain\\Domain.csproj|d:\\work\\order management \u0026 fulfillment api\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,119 +48,136 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250814211405_InitialCreate.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Migrations\\20250814211405_InitialCreate.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250814211405_InitialCreate.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Migrations\\20250814211405_InitialCreate.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Migrations\\20250814211405_InitialCreate.cs",
+              "Title": "20250816185209_Init.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Migrations\\20250816185209_Init.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250816185209_Init.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Migrations\\20250816185209_Init.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Migrations\\20250816185209_Init.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T21:14:10.836Z",
+              "WhenOpened": "2025-08-16T18:52:10.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\WebApi\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "..\\WebApi\\appsettings.Development.json",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\WebApi\\appsettings.Development.json",
-              "RelativeToolTip": "..\\WebApi\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-14T21:10:58.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Category.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Category.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T20:15:43.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IOrderRepository.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\IOrderRepository.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IOrderRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T20:13:54.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\ProductRepository.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAAAEAAAA4MzMzMzMrwBQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T20:12:48.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "..\\WebApi\\Program.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\WebApi\\Program.cs",
-              "RelativeToolTip": "..\\WebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T19:58:20.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\CategoryRepository.cs",
               "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\CategoryRepository.cs",
               "RelativeToolTip": "..\\Infrastructure\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AgIAAAcAAADQzMzMzMw3wBsAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAADgmZmZmZklwBAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T19:43:17.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\OrderRepository.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\OrderRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Repositories\\OrderRepository.cs",
-              "ViewState": "AgIAABAAAABAMzMzMzMywCcAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T19:41:26.026Z",
+              "WhenOpened": "2025-08-16T17:28:58.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABQAAAAAAAAAA==",
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\OrderRepository.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T19:40:28.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-16T17:28:38.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Infrastructure\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAAMAAACgZmZmZmYkwCIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:28:20.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:27:29.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:27:24.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Application\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:27:14.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Category.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "..\\Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:25:06.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Order.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "..\\Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:24:34.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Product.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "..\\Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:24:20.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Work\\Order Management \u0026 Fulfillment API\\WebApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "..\\WebApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Work\\Order Management \u0026 Fulfillment API\\WebApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "..\\WebApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAA8AAACAMzMzMzMpwCcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T16:49:54.614Z"
             }
           ]
         }

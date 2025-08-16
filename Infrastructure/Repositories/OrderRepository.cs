@@ -20,7 +20,7 @@ namespace Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(int id)
         {
             var order = await _context.Orders.FindAsync(id);
             if (order != null)
@@ -35,7 +35,7 @@ namespace Infrastructure.Repositories
             return await _context.Orders.ToListAsync();
         }
 
-        public async Task<Order?> GetByIdAsync(Guid id)
+        public async Task<Order?> GetByIdAsync(int id)
         {
             return await _context.Orders.FindAsync(id);
         }
