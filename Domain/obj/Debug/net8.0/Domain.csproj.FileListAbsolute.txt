@@ -1,10 +1,10 @@
+D:\Work\Order Management & Fulfillment API\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Work\Order Management & Fulfillment API\Domain\bin\Debug\net8.0\Domain.dll
+D:\Work\Order Management & Fulfillment API\Domain\bin\Debug\net8.0\Domain.pdb
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-D:\Work\Order Management & Fulfillment API\Domain\bin\Debug\net8.0\Domain.deps.json
-D:\Work\Order Management & Fulfillment API\Domain\bin\Debug\net8.0\Domain.dll
-D:\Work\Order Management & Fulfillment API\Domain\bin\Debug\net8.0\Domain.pdb
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\Domain.dll
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\Work\Order Management & Fulfillment API\Domain\obj\Debug\net8.0\Domain.pdb

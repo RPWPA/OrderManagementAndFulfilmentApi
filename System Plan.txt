@@ -1,0 +1,93 @@
+Project Scenario
+
+You’re building an Order Management & Fulfillment API for a mid-size e-commerce company.
+The API will be consumed by:
+
+Internal web apps (for warehouse, customer service)
+
+Mobile apps (for customers)
+
+External partners (via secure API gateway)
+
+High-Level Functional Requirements
+1. User & Authentication
+
+JWT-based authentication for customers and staff.
+
+Role-based authorization (e.g., Admin, Customer, WarehouseStaff).
+
+Refresh token implementation to allow long-lived sessions.
+
+External login (Google, Microsoft, etc.) for customers.
+
+2. Product Catalog
+
+CRUD endpoints for products.
+
+Each product has:
+
+Name, description, SKU, price, discount rules.
+
+Stock levels (synced with warehouse system).
+
+Category and subcategory.
+
+Multiple images (stored in Azure Blob Storage or AWS S3).
+
+Full-text search and filtering (category, price range, tags).
+
+3. Orders
+
+Customers can create orders from cart.
+
+Order status workflow: Pending → Paid → Packed → Shipped → Delivered → Returned.
+
+Real-time order tracking (push via SignalR).
+
+Support partial shipment (multiple packages for one order).
+
+Automatic tax & shipping cost calculation.
+
+Apply discount codes and gift cards.
+
+4. Payments
+
+Integrate with Stripe and PayPal.
+
+Webhook endpoint for payment gateway callbacks.
+
+Payment retry mechanism in case of failures.
+
+5. Inventory Management
+
+Sync inventory with an external Warehouse Management System via scheduled background jobs.
+
+Lock stock when an order is in Pending Payment.
+
+Auto-restock when an order is canceled or returned.
+
+6. Notifications
+
+Send order confirmation emails (via SendGrid or SMTP).
+
+Push notifications to mobile apps (Firebase Cloud Messaging).
+
+Configurable notification templates.
+
+7. Reporting & Analytics
+
+Sales report per day/month/year.
+
+Top-selling products.
+
+Average order value.
+
+Download reports as CSV or PDF.
+
+8. Audit Logging
+
+Track all changes to orders, inventory, and products.
+
+Store user ID, timestamp, and old/new values.
+
+Logs should be queryable by admins.
