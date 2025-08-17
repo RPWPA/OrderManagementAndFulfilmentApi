@@ -1,5 +1,6 @@
 ﻿using Domain.DTOs;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -73,6 +74,27 @@ namespace WebApi.Controllers
             );
 
             return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPost("makeadmin")]
+        public async Task<IActionResult> MakeAdmin([FromBody] CreateAdminDto model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+                return NotFound("User does not exist in the database.");
+
+            // check if already admin
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
+                return BadRequest("User is already an Admin.");
+
+            var result = await _userManager.AddToRoleAsync(user, "Admin");
+
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Ok($"User {model.Email} has been promoted to Admin.");
+
         }
     }
 }
