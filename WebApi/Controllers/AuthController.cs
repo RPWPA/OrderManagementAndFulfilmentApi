@@ -31,7 +31,12 @@ namespace WebApi.Controllers
             if (!result.Succeeded)
                 return BadRequest(result.Errors);
 
-            return Ok("User registered successfully!");
+            else
+            {
+                // 👇 Give new users "User" role by default
+                await _userManager.AddToRoleAsync(user, "User");
+                return Ok("User registered successfully");
+            }
         }
 
         [HttpPost("login")]
@@ -41,12 +46,20 @@ namespace WebApi.Controllers
             if (user == null || !await _userManager.CheckPasswordAsync(user, model.Password))
                 return Unauthorized();
 
-            var claims = new[]
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id)
             };
+
+            // ✅ Correctly add roles to the claims list
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role)); // Actually adds the claim
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -54,8 +67,8 @@ namespace WebApi.Controllers
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
-                claims: claims,
                 expires: DateTime.UtcNow.AddHours(1),
+                claims: claims,
                 signingCredentials: creds
             );
 

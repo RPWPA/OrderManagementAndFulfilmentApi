@@ -86,6 +86,11 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+var scope = app.Services.CreateScope();
+var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+await DataSeeder.SeedRolesAndAdminAsync(userManager, roleManager);
+
 // 7️⃣ Middleware pipeline
 if (app.Environment.IsDevelopment())
 {

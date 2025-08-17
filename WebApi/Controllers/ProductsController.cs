@@ -17,12 +17,14 @@ namespace API.Controllers
             _repository = repository;
         }
 
+        [Authorize(Roles = "User,Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _repository.GetAllAsync());
         }
 
+        [Authorize(Roles = "User,Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -31,6 +33,7 @@ namespace API.Controllers
             return Ok(product);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(Product product)
         {
@@ -38,6 +41,7 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -45,6 +49,7 @@ namespace API.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Product product)
         {
