@@ -4,6 +4,7 @@ namespace Domain.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        // Add extra properties here later if needed
+        public string? RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
     }
 }
