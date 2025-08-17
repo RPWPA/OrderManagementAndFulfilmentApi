@@ -31,6 +31,7 @@ namespace API.Controllers
             return Ok(category);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
@@ -38,6 +39,7 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = category.Id }, category);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Category category)
         {
@@ -50,6 +52,7 @@ namespace API.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
