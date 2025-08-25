@@ -9,6 +9,7 @@ namespace Application.Interfaces
         Task AddAsync(Product product);
         Task UpdateAsync(Product product);
         Task DeleteAsync(int id);
+        Task<bool> AdjustStockAsync(int productId, int quantityChange);
 
         // ✅ Search & Filtering
         Task<List<Product>> GetAllAsync(int? categoryId = null, bool includeSubcategories = false);

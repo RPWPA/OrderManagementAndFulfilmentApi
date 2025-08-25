@@ -78,5 +78,13 @@ namespace API.Controllers
             return Ok(products);
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpPost("{id}/adjust-stock")]
+        public async Task<IActionResult> AdjustStock(int id, [FromQuery] int quantityChange)
+        {
+            var success = await _repository.AdjustStockAsync(id, quantityChange);
+            if (!success) return NotFound();
+            return NoContent();
+        }
     }
 }

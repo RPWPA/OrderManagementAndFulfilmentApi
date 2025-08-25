@@ -42,7 +42,7 @@ namespace Infrastructure.Repositories
             }
         }
 
-        public async Task<IEnumerable<Product>> GetAllAsync(int? categoryId = null, bool includeSubcategories = false)
+        public async Task<List<Product>> GetAllAsync(int? categoryId = null, bool includeSubcategories = false)
         {
             var query = _context.Products.AsQueryable();
 
@@ -67,7 +67,7 @@ namespace Infrastructure.Repositories
             return await query.ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> SearchAsync(
+        public async Task<List<Product>> SearchAsync(
             string? name, int? categoryId, bool includeSubcategories,
             decimal? minPrice, decimal? maxPrice)
         {
@@ -102,6 +102,16 @@ namespace Infrastructure.Repositories
 
             return await query.ToListAsync();
         }
+        public async Task<bool> AdjustStockAsync(int productId, int quantityChange)
+        {
+            var product = await _context.Products.FindAsync(productId);
+            if (product == null) return false;
 
+            product.Stock += quantityChange;
+            if (product.Stock < 0) product.Stock = 0; // optional safeguard
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
