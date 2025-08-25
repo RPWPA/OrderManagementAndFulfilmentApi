@@ -11,6 +11,7 @@ namespace Application.Interfaces
         Task DeleteAsync(int id);
 
         // ✅ Search & Filtering
-        Task<List<Product>> SearchAsync(string? name, int? categoryId, decimal? minPrice, decimal? maxPrice);
+        Task<List<Product>> GetAllAsync(int? categoryId = null, bool includeSubcategories = false);
+        Task<List<Product>> SearchAsync(string? name, int? categoryId, bool includeSubcategories, decimal? minPrice, decimal? maxPrice);
     }
 }

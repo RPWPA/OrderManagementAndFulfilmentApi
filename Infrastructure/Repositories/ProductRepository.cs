@@ -42,15 +42,57 @@ namespace Infrastructure.Repositories
             }
         }
 
-        public async Task<List<Product>> SearchAsync(string? name, int? categoryId, decimal? minPrice, decimal? maxPrice)
+        public async Task<IEnumerable<Product>> GetAllAsync(int? categoryId = null, bool includeSubcategories = false)
         {
-            var query = _context.Products.Include(p => p.Category).AsQueryable();
+            var query = _context.Products.AsQueryable();
+
+            if (categoryId.HasValue)
+            {
+                if (includeSubcategories)
+                {
+                    var childIds = await _context.Categories
+                        .Where(c => c.ParentCategoryId == categoryId.Value)
+                        .Select(c => c.Id)
+                        .ToListAsync();
+
+                    var ids = childIds.Append(categoryId.Value).ToList();
+                    query = query.Where(p => ids.Contains(p.CategoryId));
+                }
+                else
+                {
+                    query = query.Where(p => p.CategoryId == categoryId.Value);
+                }
+            }
+
+            return await query.ToListAsync();
+        }
+
+        public async Task<IEnumerable<Product>> SearchAsync(
+            string? name, int? categoryId, bool includeSubcategories,
+            decimal? minPrice, decimal? maxPrice)
+        {
+            var query = _context.Products.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(name))
                 query = query.Where(p => p.Name.Contains(name));
 
             if (categoryId.HasValue)
-                query = query.Where(p => p.CategoryId == categoryId.Value);
+            {
+                if (includeSubcategories)
+                {
+                    var childIds = await _context.Categories
+                        .Where(c => c.ParentCategoryId == categoryId.Value)
+                        .Select(c => c.Id)
+                        .ToListAsync();
+
+                    var ids = childIds.Append(categoryId.Value).ToList();
+                    query = query.Where(p => ids.Contains(p.CategoryId));
+                }
+                else
+                {
+                    query = query.Where(p => p.CategoryId == categoryId.Value);
+                }
+            }
 
             if (minPrice.HasValue)
                 query = query.Where(p => p.Price >= minPrice.Value);
@@ -60,5 +102,6 @@ namespace Infrastructure.Repositories
 
             return await query.ToListAsync();
         }
+
     }
 }

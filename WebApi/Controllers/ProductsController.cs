@@ -17,13 +17,6 @@ namespace API.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
-        [AllowAnonymous]
-        public async Task<IActionResult> GetAll()
-        {
-            return Ok(await _repository.GetAllAsync());
-        }
-
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
@@ -64,13 +57,26 @@ namespace API.Controllers
             return NoContent();
         }
 
-
-        [HttpGet("search")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Search([FromQuery] string? name, [FromQuery] int? categoryId, [FromQuery] decimal? minPrice, [FromQuery] decimal? maxPrice)
+        [HttpGet]
+        [AllowAnonymous] // public search
+        public async Task<IActionResult> GetAll([FromQuery] int? categoryId, [FromQuery] bool includeSubcategories = false)
         {
-            var products = await _repository.SearchAsync(name, categoryId, minPrice, maxPrice);
+            var products = await _repository.GetAllAsync(categoryId, includeSubcategories);
             return Ok(products);
         }
+
+        [HttpGet("search")]
+        [AllowAnonymous] // public search
+        public async Task<IActionResult> Search(
+            [FromQuery] string? name,
+            [FromQuery] int? categoryId,
+            [FromQuery] bool includeSubcategories = false,
+            [FromQuery] decimal? minPrice = null,
+            [FromQuery] decimal? maxPrice = null)
+        {
+            var products = await _repository.SearchAsync(name, categoryId, includeSubcategories, minPrice, maxPrice);
+            return Ok(products);
+        }
+
     }
 }
