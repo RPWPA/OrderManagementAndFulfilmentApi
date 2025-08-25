@@ -17,15 +17,15 @@ namespace API.Controllers
             _repository = repository;
         }
 
-        [Authorize(Roles = "User,Admin")]
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _repository.GetAllAsync());
         }
 
-        [Authorize(Roles = "User,Admin")]
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
             var product = await _repository.GetByIdAsync(id);
@@ -64,5 +64,13 @@ namespace API.Controllers
             return NoContent();
         }
 
+
+        [HttpGet("search")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Search([FromQuery] string? name, [FromQuery] int? categoryId, [FromQuery] decimal? minPrice, [FromQuery] decimal? maxPrice)
+        {
+            var products = await _repository.SearchAsync(name, categoryId, minPrice, maxPrice);
+            return Ok(products);
+        }
     }
 }

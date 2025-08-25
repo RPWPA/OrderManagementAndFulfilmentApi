@@ -9,5 +9,8 @@ namespace Application.Interfaces
         Task AddAsync(Product product);
         Task UpdateAsync(Product product);
         Task DeleteAsync(int id);
+
+        // ✅ Search & Filtering
+        Task<List<Product>> SearchAsync(string? name, int? categoryId, decimal? minPrice, decimal? maxPrice);
     }
 }
